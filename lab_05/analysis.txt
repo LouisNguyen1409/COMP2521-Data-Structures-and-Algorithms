@@ -1,0 +1,37 @@
+
+NOTE:
+- Your time complexities should be expressed in big-O notation and be in
+  terms of n, where n is the number of people who  have  been  added  to
+  Friendbook.
+
+===============
+ FbNumFriends
+===============
+
+- Worst case time complexity: O(n)
+
+- Explanation: in this funciton I use one while loop to find all the number of friends of the given name. Therefore, the big-O notation is O(n).
+
+===============
+  FbUnfriend
+===============
+
+- Worst case time complexity: O(n)
+
+- Explanation: in this funciton I use FbIsFriend to check if they are friends which is O(n). Then when removing a node from the adj list the worse case scenerio is that the node to be removed is not the head, hence making travesrse through it which is O(n). Hence the function is O(n).
+
+===============
+FbMutualFriends
+===============
+
+- Worst case time complexity: O(n^2)
+
+- Explanation: in this function I used two for loops. First loop would loop through the adj list of name1 and inside the that loop is the second loop would iterate would the id of the name2 adj list. Hence it is O(n^2).
+
+===============
+ FbFriendRecs1
+===============
+
+- Worst case time complexity: O(n^3)
+
+- Explanation: in this function I used three for loops. First loop would loop through the adj list of name and inside that loop is the second loop would find the name that does not in friend list as well as not same with given name. Third loop is FbIsFriend to check if they are friends. Hence it is O(n^3).

@@ -1,0 +1,20 @@
+
+NOTE:
+- Your time complexities should be expressed in big-O notation and be in
+  terms of n, where n is the number of cells in the maze.
+
+============
+  solveBfs
+============
+
+- Worst case time complexity: O(n)
+
+- Explanation: In the worst case, the algorithm will have to visit every cell in the maze. This is because the algorithm will have to visit every cell in the maze to find the path to the end. In the this case, each cell will have 4 neighbors, and the algorithm will have to visit each neighbor. This means that the algorithm will have to visit 4n cells which is 4*n. Therefore, the time complexity is O(n).
+
+============
+  solveDfs
+============
+
+- Worst case time complexity: O(n)
+
+- Explanation: In the worst case, the algorithm will have to visit every cell in the maze. This is because the algorithm will have to visit every cell in the maze to find the path to the end. In the this case, each cell will have 4 neighbors, and the algorithm will have to visit each neighbor. This means that the algorithm will have to visit 4n cells which is 4*n. Therefore, the time complexity is O(n).

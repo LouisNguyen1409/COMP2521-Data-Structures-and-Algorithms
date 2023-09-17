@@ -1,0 +1,21 @@
+Graph has 6 vertices, 1 STD_ROADs, 4 FAST_ROADs
+
+V  STD Connections
+-- ---------------
+0  1
+1  0
+2 
+3 
+4 
+5 
+
+V  FAST Connections
+-- ----------------
+0  1 2
+1  0 3 4
+2  0
+3  1
+4  1
+5 
+
+day trips from 0: 1 2 3 4

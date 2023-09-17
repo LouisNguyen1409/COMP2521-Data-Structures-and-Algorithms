@@ -1,0 +1,40 @@
+
+NOTE:
+- Your time complexities should be expressed in big-O notation and be in
+  terms of either:
+  - n, where n is the number of nodes in the tree, or
+  - h, where h is the height of the tree
+
+=================
+  bstNumLeaves
+=================
+
+- Worst case time complexity: O(n) 
+
+- Explanation: In the worst case, the function needs to traverse every nodes of the BST to determine the number of leaf nodes.
+
+=================
+    bstRange
+=================
+
+- Worst case time complexity: O(h)
+
+- Explanation: In the worst case, the function needs to traverse the height of the BST twice to find the minimum and maximum values.
+
+=================
+ bstDeleteLeaves
+=================
+
+- Worst case time complexity: O(n)
+
+- Explanation: In the worst case, the function needs to traverse every nodes of the BST to delete the number of leaves nodes.
+
+=================
+  bstLevelOrder
+=================
+
+- Worst case time complexity: O(n)
+
+- Explanation: In the worst case, when all nodes are enqueued, the while loop will iterate for each node in the BST.
+
+

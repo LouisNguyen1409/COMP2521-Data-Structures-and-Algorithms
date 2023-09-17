@@ -1,0 +1,15 @@
+#!/bin/sh
+
+for t in 01 02 03 04 05 # TODO: add the rest of your test files to this list
+do
+	echo === Test $t ===
+	sort -n < tests/$t > tests/$t.exp
+	./sortIntList < tests/$t > tests/$t.out 2>&1
+
+	if diff -Bb tests/$t.exp tests/$t.out > /dev/null 2>&1
+	then
+		echo "Passed"
+	else
+		echo "Failed - check differences between tests/$t.exp and tests/$t.out"
+	fi
+done

@@ -1,0 +1,35 @@
+Empirical Analysis of sortIntList
+
+Input      Initial    Number     Avg Time           Avg Time
+Size       Order      of Runs    for sortIntList    for sort
+
+10000      random     5          0.27 sec           0.00 sec
+20000      random     5          1.25 sec           0.02 sec
+40000      random     5          6.00 sec           0.05 sec
+80000      random     5          34.65 sec          0.08 sec
+100000     random     5          57.74 sec          0.10 sec
+300000     random     5          775.49 sec         0.21 sec
+500000     random     0          ----- sec          0.33 sec
+
+10000      sorted     5          0.46 sec           0.00 sec
+20000      sorted     5          1.81 sec           0.00 sec
+40000      sorted     5          7.24 sec           0.00 sec
+80000      sorted     5          28.66 sec          0.01 sec
+100000     sorted     5          44.60 sec          0.01 sec
+300000     sorted     5          410.07 sec         0.08 sec
+500000     sorted     0          ----- sec          0.14 sec
+
+10000      reverse    5          0.01 sec           0.01 sec
+20000      reverse    5          0.02 sec           0.00 sec
+40000      reverse    5          0.05 sec           0.01 sec
+80000      reverse    5          0.08 sec           0.02 sec
+100000     reverse    5          0.10 sec           0.02 sec
+300000     reverse    5          0.30 sec           0.08 sec
+500000     reverse    5          0.51 sec           0.15 sec
+
+TODO: add rows for larger input sizes
+
+Explanation of timing results:
+We can obviously see that reverse runs faster than random and random runs faster than sorting. This happens because when the list is reversed, it will add the element to the new list at the head so it will take the fastest time so overall it will take O(n). When the list is random, it will loop through the new list and add to the identified position and does not need looping through the entire list. When the list is sorted, it will need to add at the tail of the list so it will need to loop through the list until the curr->next == NULL so it will take the longest time so overall it will take O(n^2).
+
+seq 300000 | /usr/bin/time -f "%U" ./sortIntList > /dev/null

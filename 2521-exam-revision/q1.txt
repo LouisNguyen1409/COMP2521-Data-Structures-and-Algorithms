@@ -1,0 +1,16 @@
+Question 1
+
+(a) What is the maximum input size that can be processed? Justify your
+    answer.
+
+
+
+(b) Which of the two algorithms is more efficient? Justify your answer.
+
+
+
+(c) What are the time complexities of fnA() and fnB() in terms of a and
+    b? Justify your answer.
+
+
+

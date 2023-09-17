@@ -1,0 +1,36 @@
+## Q1
+
+A and B are weighted, undirected graphs. B has the same edges as A, except the weights are increased by 3.
+
+a) Do the minimal spanning trees of A and B always contain the same edges? Justify your answer.
+Yes, since all the edeges are increased by 3, therefore, the minimal spanning treeso of graph A will be the same as graph B.
+b) Consider the tree of single-source shortest paths from some vertex (e.g. as produced by Dijkstra's algorithm).
+Does this tree always contain the same edges in both graphs? Justify your answer.
+No, since the shortest path does not 
+## Q2
+
+A particular graph is stored as an array of edges, each represented as a pair of vertices.
+When a new edge is added, it is placed at the end of the array.
+For example: [{2, 3}, {1, 2}, {0, 2}, {0, 1}].
+
+a) What is the time complexity of breadth first search using this representation? Give your answer in terms
+of V and E.
+
+b) How can this representation be adjusted to improve the complexity of BFS, while maintaining the same
+space complexity?
+
+## Q3
+
+Consider an arbitrary undirected connected graph G.
+A graph G\* is constructed by replacing every edge of G with 4 edges and two vertices like this:
+
+```
+       G                            G*
+                              ------ C ------
+                             /               \
+A ------------- B     =>    A                 B
+                             \               /
+                              ------ D ------
+```
+
+Is it true that G\* has an Euler cycle?

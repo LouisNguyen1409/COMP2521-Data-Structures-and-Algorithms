@@ -1,0 +1,14 @@
+BST:
+
+#nodes:  0
+#leaves: 0
+Range:   -1
+
+In-order:    
+Pre-order:   
+Post-order:  
+Level-order: 
+
+Deleting all the leaves in the BST...
+New BST:
+

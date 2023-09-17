@@ -1,0 +1,11 @@
+
+Tree:
+
+  50
+  / \
+ /   \
+30   60
+       \
+       100
+
+minimum difference on level 2: 0

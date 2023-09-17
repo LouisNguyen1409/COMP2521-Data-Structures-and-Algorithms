@@ -1,0 +1,10 @@
+Number of vertices: 5
+Number of edges: 8
+Edges:
+ 0: 2 4
+ 1: 2 3 4
+ 2: 
+ 3: 0 2
+ 4: 2
+
+maximum absolute degree difference: 4

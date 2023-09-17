@@ -1,0 +1,71 @@
+
+========================================================================
+                          Complexity Analysis
+========================================================================
+
+NOTE:
+- Your time complexities should be in big-O notation.
+- For MsetUnion, MsetIntersection, MsetIncluded and MsetEquals, your
+  time complexities should be in terms of n and m, where n and m are the
+  number of distinct elements in each of the multisets respectively.
+- For MsetMostCommon, your time complexity should be in terms of n and k,
+  where n is the number of distinct elements in the given multiset and k
+  is the given value of k.
+
+
+---------
+MsetUnion
+---------
+
+Worst case time complexity: O(n + m)
+
+Explanation: the worst case time complexity is O(n + m) because the function will copy all the nodes in the first multiset into the new multiset which is O(n), and then check all the nodes in the second multiset to see if there is any node that is not in the new multiset which is O(m). If there is, then the function will copy that node into the new multiset else comparing the count for that item.
+
+----------------
+MsetIntersection
+----------------
+
+Worst case time complexity: O(n * log m)
+
+Explanation: the worst case time complexity is O(n * log m) because the function will check all the nodes in the first multiset O(n) to see if there is any node as same as the node in first multiset that is in the second multiset which is O(log m).
+
+
+------------
+MsetIncluded
+------------
+
+Worst case time complexity: O(n * log m)
+
+Explanation: the worst case time complexity is O(n * log m) because the function will check all the nodes in the first multiset O(n) to see if there is any node as same as the node in first multiset that is in the second multiset which is O(log m).
+
+
+----------
+MsetEquals
+----------
+
+Worst case time complexity: O(n * log m)
+
+Explanation: the worst case time complexity is O(n * log m) because the function will check all the nodes in the first multiset O(n) to see if there is any node as same as the node in first multiset that is in the second multiset which is O(log m).
+
+
+--------------
+MsetMostCommon
+--------------
+
+Worst case time complexity: O(k^2 * log n)
+
+Explanation: the worst case time complexity is O(k^2 * log n) because the function will loop k time to node item into array which is O(k), and then loop k time to find is that item already in the array which is O(k). We also need to find the item which has the most commnon in the multiset which is O(log n).
+
+
+========================================================================
+               Design Documentation for Cursor Operations
+========================================================================
+
+If you completed the cursor operations, you must explain the design and
+implementation of your solution here.
+
+First I create a struct ll which contains the item, count, *pre and *next. Then I added a new struct ll in struct mset which is pointing to the head of the linked list. I also added struct ll *curr, struct ll *next, and struct ll *pre to struct cursor which point to the current node, next node, and previous node in the linked list. 
+Then for MsetCursorNew, I created a struct cursor with the initial value of curr = head->pre, next = head, and pre is NULL which is O(1).
+MsetCursorFree, I free the cursor which is O(1).
+MsetCursorGet access the MsetCursor cur for item and count so the complexity is also O(1).
+Both MsetCursorNext and MsetCursorPrev are O(1) because I just need to change the curr, next, and pre to the next or previous node in the linked list. 

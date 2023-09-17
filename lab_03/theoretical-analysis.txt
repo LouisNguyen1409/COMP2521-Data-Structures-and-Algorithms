@@ -1,0 +1,35 @@
+Theoretical Analysis of IntListInsertInOrder
+
+NOTE: Your time complexities should be in terms of n, where n is the
+      size of the given list.
+
+---------
+Best Case
+---------
+
+Best case time complexity: O(1)
+
+Explanation: 
+The best case time complexity occurs when the input has some property which enables the algorithm to complete as quickly as possible. For the linked list inserts number in order, the best case would occur when the insert number is at the head of the linked list, because the function would return new node as the head or linking new node as the head to the rest of the linked list without needing to examine any of the other elements. Since the function only needs to examine NULL item or one item, regardless of the size of the linked list, the best case time complexity is O(1).
+
+
+----------
+Worst Case
+----------
+
+Worst case time complexity: O(n)
+
+Explanation: 
+The worst case time complexity occurs when the input has some property which causes the algorithm to take as long as possible to complete. For the linked list inserts number in order, the worst case would be where the element being searched for inserting at the tail in the linked list. Since the function must examine all n items, the worst case time complexity is O(n).
+
+
+------------
+Average Case
+------------
+
+Average case time complexity: O(n)
+
+Explanation: 
+The average case time complexity is determined by making a reasonable assumption about all the possible kinds of input for the algorithm, and then finding the average number of operations/line executions over all of these inputs. For the linked list inserts number in order, one possible reasonable assumption is that the number is not inserting at the head or the tail of the linked list. Under this assumption, the average number of elements examined by the function will be n/2, so the average case time complexity is O(n).
+
+
